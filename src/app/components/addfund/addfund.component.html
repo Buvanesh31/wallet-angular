@@ -10,8 +10,8 @@
         <label for="exampleInputPassword1">Balance</label>
         <input type="number" [(ngModel)]=wallet.balance #salaryRef="ngModel" name ="bal" class="form-control" id="exampleInputPassword1" min=0 required>
         <div *ngIf="salaryRef.invalid && (salaryRef.touched || salaryRef.dirty)">
-            <p *ngIf="salaryRef.errors?.['required']" class="text-danger">Salary is required, cant be balnk.</p>
-            <p *ngIf="salaryRef.errors?.['min']" class="text-danger">Salary must be positive.</p>
+            <p *ngIf="salaryRef.errors?.['required']" class="text-danger">Amount is required, cant be blank.</p>
+            <p *ngIf="salaryRef.errors?.['min']" class="text-danger">Amount must be positive.</p>
   
           </div>
     </div>

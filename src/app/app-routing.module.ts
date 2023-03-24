@@ -10,7 +10,7 @@ import { TransferfundComponent } from './components/transferfund/transferfund.co
 import { WithdrawfundComponent } from './components/withdrawfund/withdrawfund.component';
 
 const routes: Routes = [
-  // {path:'', redirectTo:"/home", pathMatch:"full"},
+  {path:'', redirectTo:"/home", pathMatch:"full"},
   {path:'demo',component:DemoComponent},
   {path:'home',component:HomeComponent},
   {path: 'login',component:LoginComponent},

@@ -27,6 +27,16 @@ export class WalletbackendService {
     return this.httpclient.patch("http://localhost:8090/wallet/"+encodeURIComponent(String(id))+"/"+encodeURIComponent(String(balance)),body);
     //return this.httpclient.patch("http://localhost:8090/wallet/"+newwallet.id,newwallet.balance);
   }
+  Withdraw(id?:number,balance?:number):Observable<any>{
+    let body = {'id':id,'balance':balance};
+    return this.httpclient.patch("http://localhost:8090/wallet/"+encodeURIComponent(String(id))+"/fund/"+encodeURIComponent(String(balance)),body);
+    //return this.httpclient.patch("http://localhost:8090/wallet/"+newwallet.id,newwallet.balance);
+  }
+  Transfer(id?:number,toid?:number,balance?:number):Observable<any>{
+    let body = {'id':id,'balance':balance};
+    return this.httpclient.patch("http://localhost:8090/wallet/"+encodeURIComponent(String(id))+"/transfer/"+encodeURIComponent(String(toid))+"/"+encodeURIComponent(String(balance)),body);
+    //return this.httpclient.patch("http://localhost:8090/wallet/"+newwallet.id,newwallet.balance);
+  }
 }
    
 
